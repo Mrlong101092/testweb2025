@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import MyComponent from './testallinweb/MyComponent'
 import './App.css'
+import MyComponent from './testallinweb/MyComponent'
 import Component02 from './testallinweb/Component02'
 import Component01 from './testallinweb/Component01'
 
