@@ -2,8 +2,18 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 import TodoNew from './component/TodoNew'
 import TodoData from './component/TodoData'
+import {useState} from 'react';
 
 const App = () => {
+
+  const [todoList, setTodoList] = useState([
+    {
+    id: 1, name: "JSX"
+    },
+    {
+    id: 2, name: "JS"
+    }
+])
 
 const mrlong = "Mrlong M";
 const age = 30;
@@ -28,6 +38,7 @@ const age = 30;
           name={mrlong}
           age={age} 
           data={data}
+          todoList={todoList}
         />
         <div>
         <a href="https://react.dev" target="_blank">
