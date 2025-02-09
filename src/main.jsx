@@ -2,7 +2,11 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import {createBrowserRouter,RouterProvider,} from "react-router-dom";
 import App from './App.jsx'
-import './index.css'
+import './styles/global.css'
+import LoginPage from './pages/login.jsx';
+import RegistersPage from './pages/registers.jsx';
+import UserPage from './pages/users.jsx';
+import ProductPage from './pages/products.jsx';
 
 const router = createBrowserRouter([
   {
@@ -11,19 +15,19 @@ const router = createBrowserRouter([
   },
   {
     path: "/login",
-    element: <div>login page</div>,
+    element: <LoginPage />,
   },
   {
     path: "/register",
-    element: <div>resgister page</div>,
+    element: <RegistersPage />,
   },
   {
     path: "/users",
-    element: <div>users page</div>,
+    element: <UserPage />,
   },
   {
     path: "/products",
-    element: <div>products page</div>,
+    element: <ProductPage />,
   },
 ]);
 
