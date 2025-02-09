@@ -22,22 +22,23 @@ const App = () => {
    }
 
   return (
-    <>
       <div className="todo-container">
         <div className="todo-title">Mrlong List</div>
         <TodoNew
         addNewTodo={addNewTodo}
         />
+        {todoList.length > 0 ?
         <TodoData
           todoList={todoList}
         />
+        :
         <div>
         <a href="https://react.dev" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
+        </div>
+        }
       </div>
-      </div>
-    </>
   )
 }
 export default App
