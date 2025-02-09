@@ -24,9 +24,17 @@ const age = 30;
   }
   
   const addNewTodo =(name)=>{
-    alert(`call me ${name}`)
+    const newTodo = {
+      id: randomIntFromInterval(1, 9999),
+      name: name
+    }
+    setTodoList([...todoList, newTodo])
   }
- 
+
+  const randomIntFromInterval = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1) + min)
+   }
+   
   return (
     <>
       <div className="todo-container">
