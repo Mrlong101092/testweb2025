@@ -7,22 +7,8 @@ import {useState} from 'react';
 const App = () => {
 
   const [todoList, setTodoList] = useState([
-    {
-    id: 1, name: "JSX"
-    },
-    {
-    id: 2, name: "JS"
-    }
-])
-
-const mrlong = "Mrlong M";
-const age = 30;
-
- const data = {
-  address: "Hanoi",
-  country: "Vietnam"
-  }
-  
+    // {id: 1, name: "JSX"},{id: 2, name: "JS"}
+])  
   const addNewTodo =(name)=>{
     const newTodo = {
       id: randomIntFromInterval(1, 9999),
@@ -34,7 +20,7 @@ const age = 30;
   const randomIntFromInterval = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1) + min)
    }
-   
+
   return (
     <>
       <div className="todo-container">
@@ -43,9 +29,6 @@ const age = 30;
         addNewTodo={addNewTodo}
         />
         <TodoData
-          name={mrlong}
-          age={age} 
-          data={data}
           todoList={todoList}
         />
         <div>
