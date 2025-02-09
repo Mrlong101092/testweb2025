@@ -9,6 +9,7 @@ const App = () => {
   const [todoList, setTodoList] = useState([
     // {id: 1, name: "JSX"},{id: 2, name: "JS"}
 ])  
+
   const addNewTodo =(name)=>{
     const newTodo = {
       id: randomIntFromInterval(1, 9999),
@@ -21,6 +22,11 @@ const App = () => {
     return Math.floor(Math.random() * (max - min + 1) + min)
    }
 
+  const deleteTodo = (id) => {
+    const newTodo = todoList.filter((item)=>item.id !== id)
+    setTodoList(newTodo);   
+  }
+
   return (
       <div className="todo-container">
         <div className="todo-title">Mrlong List</div>
@@ -30,6 +36,7 @@ const App = () => {
         {todoList.length > 0 ?
         <TodoData
           todoList={todoList}
+          deleteTodo={deleteTodo}
         />
         :
         <div>
