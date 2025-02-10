@@ -7,29 +7,34 @@ import LoginPage from './pages/login.jsx';
 import RegistersPage from './pages/registers.jsx';
 import UserPage from './pages/users.jsx';
 import ProductPage from './pages/products.jsx';
+import TodoApp from './component/TodoApp.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    children: [       
+    children:[  
+      {
+        index: true,
+        element: <TodoApp/>
+      },    
       {
         path: "/users",
-        element: <UserPage />,
+        element: <UserPage />
       },
       {
         path: "/products",
-        element: <ProductPage />,
+        element: <ProductPage />
       },
     ],
   },
   {
     path: "/login",
-    element: <LoginPage />,
+    element: <LoginPage />
   },
   {
     path: "/register",
-    element: <RegistersPage />,
+    element: <RegistersPage />
   },
 ]);
 
