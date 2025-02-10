@@ -5,6 +5,7 @@ import TodoData from './component/TodoData'
 import {useState} from 'react';
 import Header from './layout/header';
 import Footer from './layout/footer';
+import { Outlet } from 'react-router-dom';
 
 const App = () => {
 
@@ -22,7 +23,7 @@ const App = () => {
 
   const randomIntFromInterval = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1) + min)
-   }
+  }
 
   const deleteTodo = (id) => {
     const newTodo = todoList.filter((item)=>item.id !== id)
@@ -50,6 +51,7 @@ const App = () => {
         </div>
         }
       </div>
+      <Outlet />
       <Footer />
     </>
   )

@@ -1,6 +1,6 @@
 const ProductPage = () => {
     return (
-        <div>products page</div>
+        <div>Products Page</div>
     );
   }
   export default ProductPage;
