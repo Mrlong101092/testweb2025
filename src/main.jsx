@@ -6,13 +6,15 @@ import './styles/global.css'
 import LoginPage from './pages/login.jsx';
 import RegistersPage from './pages/registers.jsx';
 import UserPage from './pages/users.jsx';
-import ProductPage from './pages/products.jsx';
+import BookPage from './pages/books.jsx';
 import TodoApp from './component/TodoApp.jsx';
+import ErrorPage from './pages/error.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <ErrorPage />,
     children:[  
       {
         index: true,
@@ -23,8 +25,8 @@ const router = createBrowserRouter([
         element: <UserPage />
       },
       {
-        path: "/products",
-        element: <ProductPage />
+        path: "/books",
+        element: <BookPage />
       },
     ],
   },
